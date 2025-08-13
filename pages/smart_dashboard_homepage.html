@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Utility Portal - Your Financial Wellness Partner</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsmartutil5811back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                        <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">Smart Utility Portal</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="smart_dashboard_homepage.html" class="text-primary font-semibold">Dashboard</a>
+                    <a href="utility_account_management.html" class="text-text-secondary hover:text-primary transition-fast">Utilities</a>
+                    <a href="bill_management_center.html" class="text-text-secondary hover:text-primary transition-fast">Bills</a>
+                    <a href="payment_command_center.html" class="text-text-secondary hover:text-primary transition-fast">Payments</a>
+                    <a href="pricing_plans.html" class="text-text-secondary hover:text-primary transition-fast">Pricing</a>
+                    <a href="profile_account_settings.html" class="btn-primary">Get Started</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Live Dashboard Demo -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-accent-50 py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl lg:text-5xl font-bold text-text-primary leading-tight">
+                            Transform Utility Chaos Into 
+                            <span class="text-primary">Organized Control</span>
+                        </h1>
+                        <p class="text-lg text-text-secondary leading-relaxed">
+                            Your personal financial command center for household utilities. Track, optimize, and automate your utility bills with intelligent insights and predictive analytics.
+                        </p>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="font-semibold text-text-primary">2.3M+ bills managed</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="font-semibold text-text-primary">$847 average annual savings</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="font-semibold text-text-primary">99.9% payment success rate</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="profile_account_settings.html" class="btn-primary text-center">
+                            Start Your Free Trial
+                        </a>
+                        <button class="flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-fast">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
+                            </svg>
+                            See How It Works
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Live Dashboard Demo -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-elevated p-6 space-y-6">
+                        <!-- Dashboard Header -->
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-text-primary">Your Dashboard</h3>
+                            <span class="text-sm text-text-muted">Live Demo</span>
+                        </div>
+                        
+                        <!-- Upcoming Payment Alert -->
+                        <div class="bg-warning-light border border-warning/20 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-warning/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-warning">Payment Due Soon</p>
+                                    <p class="text-sm text-text-secondary">$247.83 due in 3 days</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Stats -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-accent-50 rounded-lg p-4">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold text-accent">$1,247</span>
+                                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"/>
+                                    </svg>
+                                </div>
+                                <p class="text-sm text-text-muted">This Month</p>
+                            </div>
+                            <div class="bg-primary-50 rounded-lg p-4">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold text-primary">-12%</span>
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                </div>
+                                <p class="text-sm text-text-muted">vs Last Month</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Bills -->
+                        <div class="space-y-3">
+                            <h4 class="font-medium text-text-primary">Recent Bills</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Electric Bill</p>
+                                            <p class="text-sm text-text-muted">ConEd - Paid</p>
+                                        </div>
+                                    </div>
+                                    <span class="font-mono font-semibold text-text-primary">$127.45</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-warning/20 rounded-full flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-text-primary">Gas Bill</p>
+                                            <p class="text-sm text-text-muted">National Grid - Due 3 days</p>
+                                        </div>
+                                    </div>
+                                    <span class="font-mono font-semibold text-text-primary">$89.32</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                    Five Core Capabilities That Transform Your Utility Management
+                </h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    From chaos to control - our intelligent platform handles every aspect of your utility bills with precision and insight.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bill Intelligence -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-fast">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Bill Intelligence</h3>
+                    <p class="text-text-secondary mb-4">Advanced OCR scanning automatically extracts and categorizes bill data from photos or PDFs. No more manual entry.</p>
+                    <div class="bg-surface rounded-lg p-3">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-text-muted">99.7% accuracy rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Automation -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-fast">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Payment Automation</h3>
+                    <p class="text-text-secondary mb-4">Set up intelligent autopay rules with custom scheduling. Never miss a payment or pay late fees again.</p>
+                    <div class="bg-surface rounded-lg p-3">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-text-muted">$127 avg. late fee savings</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Consumption Analytics -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-fast">
+                        <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Consumption Analytics</h3>
+                    <p class="text-text-secondary mb-4">Interactive charts reveal usage patterns, seasonal trends, and optimization opportunities across all utilities.</p>
+                    <div class="bg-surface rounded-lg p-3">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-text-muted">18% avg. usage reduction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Provider Integration -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-fast">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Provider Integration</h3>
+                    <p class="text-text-secondary mb-4">Direct connections with major utility companies for real-time account data and seamless bill retrieval.</p>
+                    <div class="flex items-center space-x-2 mt-4">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=100&auto=format&fit=crop" alt="ConEd" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=100&auto=format&fit=crop" alt="National Grid" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=100&auto=format&fit=crop" alt="Verizon" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <span class="text-sm text-text-muted">+247 more</span>
+                    </div>
+                </div>
+                
+                <!-- Predictive Insights -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-fast">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Predictive Insights</h3>
+                    <p class="text-text-secondary mb-4">AI-powered seasonal forecasting and budget planning help you anticipate costs and optimize spending.</p>
+                    <div class="bg-surface rounded-lg p-3">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-text-muted">94% forecast accuracy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Experience -->
+                <div class="card card-hover group">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-fast">
+                        <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-3">Mobile Experience</h3>
+                    <p class="text-text-secondary mb-4">Quick bill upload via camera, payment status at-a-glance, and swipe gestures for common actions.</p>
+                    <div class="bg-surface rounded-lg p-3">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-text-muted">3-second bill capture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof & Testimonials -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary">
+                    Trusted by Busy Professionals Nationwide
+                </h2>
+                <p class="text-lg text-text-secondary">
+                    Real savings, real time saved, real peace of mind.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=100&auto=format&fit=crop" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Sarah Chen</h4>
+                            <p class="text-sm text-text-muted">Marketing Director, NYC</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"Saved me $1,247 last year and about 3 hours monthly. The predictive insights helped me budget for winter heating costs perfectly."</p>
+                    <div class="flex items-center space-x-1">
+                        <div class="flex space-x-1">
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-text-muted ml-2">5.0</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="card">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" alt="Michael Rodriguez" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Michael Rodriguez</h4>
+                            <p class="text-sm text-text-muted">Software Engineer, Austin</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The automation is incredible. Haven't thought about utility bills in months, yet I'm saving 15% on average. The mobile app is perfect for quick uploads."</p>
+                    <div class="flex items-center space-x-1">
+                        <div class="flex space-x-1">
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-text-muted ml-2">5.0</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="card">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" alt="Jennifer Park" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Jennifer Park</h4>
+                            <p class="text-sm text-text-muted">Small Business Owner, Seattle</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"Managing 4 locations was a nightmare. Now everything's centralized and I can see patterns across all properties. Reduced our energy costs by 22%."</p>
+                    <div class="flex items-center space-x-1">
+                        <div class="flex space-x-1">
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-text-muted ml-2">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white">
+                        Ready to Transform Your Utility Management?
+                    </h2>
+                    <p class="text-lg text-primary-100 max-w-2xl mx-auto">
+                        Join thousands of professionals who've taken control of their utility bills. Start your free trial today and see immediate results.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="profile_account_settings.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-fast">
+                        Start Free Trial
+                    </a>
+                    <a href="pricing_plans.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-fast">
+                        View Pricing
+                    </a>
+                </div>
+                
+                <p class="text-sm text-primary-100">
+                    No credit card required • 14-day free trial • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                            <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                        </svg>
+                        <span class="text-xl font-bold">Smart Utility Portal</span>
+                    </div>
+                    <p class="text-secondary-300">
+                        Your financial wellness partner for modern utility management.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="smart_dashboard_homepage.html" class="text-secondary-300 hover:text-white transition-fast">Dashboard</a></li>
+                        <li><a href="utility_account_management.html" class="text-secondary-300 hover:text-white transition-fast">Utility Management</a></li>
+                        <li><a href="bill_management_center.html" class="text-secondary-300 hover:text-white transition-fast">Bill Center</a></li>
+                        <li><a href="payment_command_center.html" class="text-secondary-300 hover:text-white transition-fast">Payment Center</a></li>
+                        <li><a href="pricing_plans.html" class="text-secondary-300 hover:text-white transition-fast">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Live Chat</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Video Tutorials</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">API Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Community Forum</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">About Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Careers</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Press</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-12 pt-8 text-center">
+                <p class="text-secondary-300">
+                    © 2025 Smart Utility Portal. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

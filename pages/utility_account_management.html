@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utility Account Management - Smart Utility Portal</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsmartutil5811back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                        <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">Smart Utility Portal</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="smart_dashboard_homepage.html" class="text-text-secondary hover:text-primary transition-fast">Dashboard</a>
+                    <a href="utility_account_management.html" class="text-primary font-semibold">Utilities</a>
+                    <a href="bill_management_center.html" class="text-text-secondary hover:text-primary transition-fast">Bills</a>
+                    <a href="payment_command_center.html" class="text-text-secondary hover:text-primary transition-fast">Payments</a>
+                    <a href="pricing_plans.html" class="text-text-secondary hover:text-primary transition-fast">Pricing</a>
+                    <a href="profile_account_settings.html" class="btn-primary">Get Started</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-white border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+                <div class="space-y-2">
+                    <h1 class="text-3xl font-bold text-text-primary">Utility Account Management</h1>
+                    <p class="text-lg text-text-secondary">Connect and manage all your utility accounts in one secure location</p>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="flex flex-wrap gap-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary">4</div>
+                        <div class="text-sm text-text-muted">Connected</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-accent">$1,247</div>
+                        <div class="text-sm text-text-muted">Monthly Total</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-warning">2</div>
+                        <div class="text-sm text-text-muted">Need Attention</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Sidebar Filters -->
+            <div class="lg:col-span-1">
+                <div class="card space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-text-primary">Filter Accounts</h3>
+                        <button class="text-sm text-primary hover:text-primary-700 transition-fast">
+                            <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                            Reset
+                        </button>
+                    </div>
+                    
+                    <!-- Status Filter -->
+                    <div class="space-y-3">
+                        <h4 class="font-medium text-text-primary">Connection Status</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Active (4)</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-warning rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Attention Needed (2)</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" />
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-secondary-400 rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Inactive (0)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Utility Type Filter -->
+                    <div class="space-y-3">
+                        <h4 class="font-medium text-text-primary">Utility Type</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <span class="text-sm text-text-secondary">Electric (2)</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <span class="text-sm text-text-secondary">Gas (1)</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <span class="text-sm text-text-secondary">Water (1)</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" checked />
+                                <span class="text-sm text-text-secondary">Internet (1)</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="rounded border-border text-primary focus:ring-primary-500" />
+                                <span class="text-sm text-text-secondary">Trash (0)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Budget Range -->
+                    <div class="space-y-3">
+                        <h4 class="font-medium text-text-primary">Monthly Budget Range</h4>
+                        <div class="space-y-2">
+                            <input type="range" min="0" max="500" value="300" class="w-full h-2 bg-secondary-200 rounded-lg appearance-none cursor-pointer" />
+                            <div class="flex justify-between text-sm text-text-muted">
+                                <span>$0</span>
+                                <span class="font-medium text-text-primary">$300</span>
+                                <span>$500+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="card mt-6">
+                    <h3 class="font-semibold text-text-primary mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <button class="w-full flex items-center space-x-3 p-3 text-left hover:bg-surface rounded-lg transition-fast">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-sm font-medium text-text-primary">Scan Bill to Add</span>
+                        </button>
+                        <button class="w-full flex items-center space-x-3 p-3 text-left hover:bg-surface rounded-lg transition-fast">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                            <span class="text-sm font-medium text-text-primary">Usage Analytics</span>
+                        </button>
+                        <button class="w-full flex items-center space-x-3 p-3 text-left hover:bg-surface rounded-lg transition-fast">
+                            <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                            </svg>
+                            <span class="text-sm font-medium text-text-primary">Share Access</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3 space-y-8">
+                <!-- Add New Utility CTA -->
+                <div class="bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl p-6 border border-primary/10">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-semibold text-text-primary">Connect More Utilities</h3>
+                            <p class="text-text-secondary">Add accounts from our database of 500+ utility providers for complete management</p>
+                        </div>
+                        <button class="btn-primary flex items-center space-x-2 self-start md:self-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                            <span>Add New Utility</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Connected Utilities Grid -->
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-semibold text-text-primary">Connected Utilities</h2>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-2">
+                                <button class="p-2 hover:bg-surface rounded-lg transition-fast">
+                                    <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-surface rounded-lg transition-fast">
+                                    <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Utility Cards Grid -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- ConEd Electric -->
+                        <div class="card card-hover group">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=48&auto=format&fit=crop" alt="ConEd" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">ConEd Electric</h3>
+                                        <p class="text-sm text-text-muted">Account: ****-4521</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                    <span class="text-sm font-medium text-accent">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Last Bill Amount</span>
+                                    <span class="font-mono font-semibold text-text-primary">$127.45</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Next Bill Date</span>
+                                    <span class="text-sm font-medium text-text-primary">Jan 15, 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Monthly Average</span>
+                                    <span class="font-mono font-semibold text-text-primary">$134.20</span>
+                                </div>
+                                
+                                <!-- Usage Chart -->
+                                <div class="bg-surface rounded-lg p-3">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs text-text-muted">Usage Trend (6 months)</span>
+                                        <span class="text-xs font-medium text-accent">-5.2%</span>
+                                    </div>
+                                    <div class="h-8 flex items-end space-x-1">
+                                        <div class="bg-primary/30 w-2 h-4 rounded-sm"></div>
+                                        <div class="bg-primary/40 w-2 h-5 rounded-sm"></div>
+                                        <div class="bg-primary/50 w-2 h-6 rounded-sm"></div>
+                                        <div class="bg-primary/60 w-2 h-4 rounded-sm"></div>
+                                        <div class="bg-primary/70 w-2 h-3 rounded-sm"></div>
+                                        <div class="bg-primary w-2 h-3 rounded-sm"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex space-x-3 pt-2">
+                                    <a href="bill_management_center.html" class="flex-1 bg-primary/10 text-primary text-center py-2 rounded-lg font-medium hover:bg-primary/20 transition-fast">
+                                        View Bills
+                                    </a>
+                                    <a href="payment_command_center.html" class="flex-1 bg-accent/10 text-accent text-center py-2 rounded-lg font-medium hover:bg-accent/20 transition-fast">
+                                        Pay Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- National Grid Gas -->
+                        <div class="card card-hover group">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-warning/10 rounded-xl flex items-center justify-center">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=48&auto=format&fit=crop" alt="National Grid" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">National Grid Gas</h3>
+                                        <p class="text-sm text-text-muted">Account: ****-7892</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                    <span class="text-sm font-medium text-warning">Attention</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-warning-light border border-warning/20 rounded-lg p-3">
+                                    <div class="flex items-center space-x-2">
+                                        <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                                        </svg>
+                                        <span class="text-sm font-medium text-warning">Payment overdue by 3 days</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Outstanding Amount</span>
+                                    <span class="font-mono font-semibold text-error">$89.32</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Due Date</span>
+                                    <span class="text-sm font-medium text-error">Jan 10, 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Monthly Average</span>
+                                    <span class="font-mono font-semibold text-text-primary">$95.60</span>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex space-x-3 pt-2">
+                                    <a href="payment_command_center.html" class="flex-1 bg-error text-white text-center py-2 rounded-lg font-medium hover:bg-error/90 transition-fast">
+                                        Pay Now
+                                    </a>
+                                    <button class="flex-1 bg-secondary-100 text-secondary-700 text-center py-2 rounded-lg font-medium hover:bg-secondary-200 transition-fast">
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- NYC Water -->
+                        <div class="card card-hover group">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                                        <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=48" alt="NYC Water" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">NYC Water</h3>
+                                        <p class="text-sm text-text-muted">Account: ****-1234</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                    <span class="text-sm font-medium text-accent">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Last Bill Amount</span>
+                                    <span class="font-mono font-semibold text-text-primary">$67.89</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Next Bill Date</span>
+                                    <span class="text-sm font-medium text-text-primary">Jan 20, 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Monthly Average</span>
+                                    <span class="font-mono font-semibold text-text-primary">$71.25</span>
+                                </div>
+                                
+                                <!-- Usage Chart -->
+                                <div class="bg-surface rounded-lg p-3">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs text-text-muted">Usage Trend (6 months)</span>
+                                        <span class="text-xs font-medium text-accent">-2.1%</span>
+                                    </div>
+                                    <div class="h-8 flex items-end space-x-1">
+                                        <div class="bg-accent/30 w-2 h-5 rounded-sm"></div>
+                                        <div class="bg-accent/40 w-2 h-6 rounded-sm"></div>
+                                        <div class="bg-accent/50 w-2 h-4 rounded-sm"></div>
+                                        <div class="bg-accent/60 w-2 h-5 rounded-sm"></div>
+                                        <div class="bg-accent/70 w-2 h-4 rounded-sm"></div>
+                                        <div class="bg-accent w-2 h-4 rounded-sm"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex space-x-3 pt-2">
+                                    <a href="bill_management_center.html" class="flex-1 bg-primary/10 text-primary text-center py-2 rounded-lg font-medium hover:bg-primary/20 transition-fast">
+                                        View Bills
+                                    </a>
+                                    <a href="payment_command_center.html" class="flex-1 bg-accent/10 text-accent text-center py-2 rounded-lg font-medium hover:bg-accent/20 transition-fast">
+                                        Pay Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Verizon Internet -->
+                        <div class="card card-hover group">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
+                                        <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=48" alt="Verizon" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">Verizon Internet</h3>
+                                        <p class="text-sm text-text-muted">Account: ****-9876</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                    <span class="text-sm font-medium text-warning">Attention</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-warning-light border border-warning/20 rounded-lg p-3">
+                                    <div class="flex items-center space-x-2">
+                                        <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                                        </svg>
+                                        <span class="text-sm font-medium text-warning">Account verification needed</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Last Bill Amount</span>
+                                    <span class="font-mono font-semibold text-text-primary">$79.99</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Next Bill Date</span>
+                                    <span class="text-sm font-medium text-text-primary">Jan 18, 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-text-secondary">Monthly Plan</span>
+                                    <span class="font-mono font-semibold text-text-primary">$79.99</span>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex space-x-3 pt-2">
+                                    <button class="flex-1 bg-warning text-white text-center py-2 rounded-lg font-medium hover:bg-warning/90 transition-fast">
+                                        Verify Account
+                                    </button>
+                                    <button class="flex-1 bg-secondary-100 text-secondary-700 text-center py-2 rounded-lg font-medium hover:bg-secondary-200 transition-fast">
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Consumption Comparison Chart -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-text-primary">Consumption Comparison</h3>
+                        <div class="flex items-center space-x-2">
+                            <select class="text-sm border border-border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                                <option>Last 6 months</option>
+                                <option>Last 12 months</option>
+                                <option>Year to date</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Chart Area -->
+                        <div class="space-y-4">
+                            <div class="h-64 bg-surface rounded-lg flex items-center justify-center">
+                                <svg class="w-full h-full p-4" viewBox="0 0 400 200">
+                                    <!-- Electric Usage Line -->
+                                    <polyline fill="none" stroke="#2563EB" stroke-width="3" points="20,150 80,120 140,130 200,110 260,100 320,95 380,90"/>
+                                    <!-- Gas Usage Line -->
+                                    <polyline fill="none" stroke="#D97706" stroke-width="3" points="20,180 80,160 140,170 200,140 260,130 320,125 380,120"/>
+                                    <!-- Water Usage Line -->
+                                    <polyline fill="none" stroke="#10B981" stroke-width="3" points="20,160 80,155 140,150 200,145 260,140 320,138 380,135"/>
+                                    <!-- Internet Usage Line -->
+                                    <polyline fill="none" stroke="#64748B" stroke-width="3" points="20,100 80,100 140,100 200,100 260,100 320,100 380,100"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Legend -->
+                            <div class="flex flex-wrap gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Electric</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Gas</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Water</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-secondary-500 rounded-full"></div>
+                                    <span class="text-sm text-text-secondary">Internet</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Insights -->
+                        <div class="space-y-4">
+                            <h4 class="font-medium text-text-primary">Key Insights</h4>
+                            <div class="space-y-3">
+                                <div class="bg-accent-50 border border-accent/20 rounded-lg p-3">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"/>
+                                        </svg>
+                                        <span class="text-sm font-medium text-accent">Great Progress</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Your electric usage decreased by 12% compared to last winter</p>
+                                </div>
+                                
+                                <div class="bg-warning-light border border-warning/20 rounded-lg p-3">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+                                        </svg>
+                                        <span class="text-sm font-medium text-warning">Seasonal Alert</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Gas usage typically peaks in February. Budget an extra $30-40</p>
+                                </div>
+                                
+                                <div class="bg-primary-50 border border-primary/20 rounded-lg p-3">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span class="text-sm font-medium text-primary">Optimization Tip</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Consider bundling internet with mobile for potential $15/month savings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Budget Allocation Tool -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-text-primary">Monthly Budget Allocation</h3>
+                        <button class="text-sm text-primary hover:text-primary-700 transition-fast">
+                            Edit Budget
+                        </button>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Budget Breakdown -->
+                        <div class="space-y-4">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-4 h-4 bg-primary rounded"></div>
+                                        <span class="text-sm font-medium text-text-primary">Electric</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-mono font-semibold text-text-primary">$140</div>
+                                        <div class="text-xs text-text-muted">35% of budget</div>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-secondary-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-4 h-4 bg-warning rounded"></div>
+                                        <span class="text-sm font-medium text-text-primary">Gas</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-mono font-semibold text-text-primary">$100</div>
+                                        <div class="text-xs text-text-muted">25% of budget</div>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-secondary-200 rounded-full h-2">
+                                    <div class="bg-warning h-2 rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-4 h-4 bg-accent rounded"></div>
+                                        <span class="text-sm font-medium text-text-primary">Water</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-mono font-semibold text-text-primary">$80</div>
+                                        <div class="text-xs text-text-muted">20% of budget</div>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-secondary-200 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-4 h-4 bg-secondary-500 rounded"></div>
+                                        <span class="text-sm font-medium text-text-primary">Internet</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-mono font-semibold text-text-primary">$80</div>
+                                        <div class="text-xs text-text-muted">20% of budget</div>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-secondary-200 rounded-full h-2">
+                                    <div class="bg-secondary-500 h-2 rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Budget Summary -->
+                        <div class="space-y-6">
+                            <div class="bg-surface rounded-lg p-4">
+                                <h4 class="font-medium text-text-primary mb-3">Budget Summary</h4>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="text-sm text-text-secondary">Total Budget</span>
+                                        <span class="font-mono font-semibold text-text-primary">$400.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-sm text-text-secondary">Current Spending</span>
+                                        <span class="font-mono font-semibold text-text-primary">$364.65</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-sm text-text-secondary">Remaining</span>
+                                        <span class="font-mono font-semibold text-accent">$35.35</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-accent-50 border border-accent/20 rounded-lg p-4">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"/>
+                                    </svg>
+                                    <span class="font-medium text-accent">Under Budget</span>
+                                </div>
+                                <p class="text-sm text-text-secondary">You're tracking 9% under budget this month. Great job managing your utility costs!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                            <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                        </svg>
+                        <span class="text-xl font-bold">Smart Utility Portal</span>
+                    </div>
+                    <p class="text-secondary-300">
+                        Your financial wellness partner for modern utility management.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="smart_dashboard_homepage.html" class="text-secondary-300 hover:text-white transition-fast">Dashboard</a></li>
+                        <li><a href="utility_account_management.html" class="text-secondary-300 hover:text-white transition-fast">Utility Management</a></li>
+                        <li><a href="bill_management_center.html" class="text-secondary-300 hover:text-white transition-fast">Bill Center</a></li>
+                        <li><a href="payment_command_center.html" class="text-secondary-300 hover:text-white transition-fast">Payment Center</a></li>
+                        <li><a href="pricing_plans.html" class="text-secondary-300 hover:text-white transition-fast">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Live Chat</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Video Tutorials</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">API Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Community Forum</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">About Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Careers</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Press</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-12 pt-8 text-center">
+                <p class="text-secondary-300">
+                    © 2025 Smart Utility Portal. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

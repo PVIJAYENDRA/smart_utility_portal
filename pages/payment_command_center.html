@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Command Center - Smart Utility Portal</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsmartutil5811back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-card sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                        <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">Smart Utility Portal</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="smart_dashboard_homepage.html" class="text-text-secondary hover:text-primary transition-fast">Dashboard</a>
+                    <a href="utility_account_management.html" class="text-text-secondary hover:text-primary transition-fast">Utilities</a>
+                    <a href="bill_management_center.html" class="text-text-secondary hover:text-primary transition-fast">Bills</a>
+                    <a href="payment_command_center.html" class="text-primary font-semibold">Payments</a>
+                    <a href="pricing_plans.html" class="text-text-secondary hover:text-primary transition-fast">Pricing</a>
+                    <a href="profile_account_settings.html" class="btn-primary">Account</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-accent-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl font-bold text-text-primary">Payment Command Center</h1>
+                            <p class="text-lg text-text-secondary">Sophisticated financial control for all your utility payments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="btn-primary flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        Make Payment
+                    </button>
+                    <button class="btn-secondary flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        Setup Autopay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Column - Payment Dashboard -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Security Status Banner -->
+                <div class="bg-accent-50 border border-accent/20 rounded-xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-accent">Bank-Level Security Active</h3>
+                                <p class="text-sm text-text-secondary">256-bit encryption • PCI DSS Compliant • 2FA Enabled</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Security Badge" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <img src="https://images.pixabay.com/photo/2017/01/10/03/54/icon-1968247_1280.png?auto=compress&cs=tinysrgb&w=100" alt="PCI Compliance" class="w-8 h-8 rounded object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Payments -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Upcoming Payments</h2>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-sm text-primary hover:text-primary-700 font-medium">View All</button>
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Payment Item 1 -->
+                        <div class="flex items-center justify-between p-4 bg-warning-light border border-warning/20 rounded-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-warning/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">ConEd Electric</h3>
+                                    <p class="text-sm text-text-secondary">Due in 2 days • Aug 15, 2025</p>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <span class="status-warning">Autopay Scheduled</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-mono font-bold text-text-primary">$247.83</p>
+                                <p class="text-sm text-text-muted">Account Balance: $1,247.50</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Item 2 -->
+                        <div class="flex items-center justify-between p-4 bg-surface rounded-lg border border-border">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">National Grid Gas</h3>
+                                    <p class="text-sm text-text-secondary">Due in 5 days • Aug 18, 2025</p>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <span class="status-success">Autopay Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-mono font-bold text-text-primary">$89.32</p>
+                                <p class="text-sm text-text-muted">Account Balance: $1,247.50</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Item 3 -->
+                        <div class="flex items-center justify-between p-4 bg-surface rounded-lg border border-border">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"/>
+                                        <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V9a1 1 0 00-1-1h-1v4.5a1.5 1.5 0 01-3 0V8a1 1 0 011-1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Verizon Internet</h3>
+                                    <p class="text-sm text-text-secondary">Due in 8 days • Aug 21, 2025</p>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <span class="status-success">Autopay Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-mono font-bold text-text-primary">$79.99</p>
+                                <p class="text-sm text-text-muted">Account Balance: $1,247.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Payment Methods</h2>
+                        <button class="text-sm text-primary hover:text-primary-700 font-medium flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                            Add Method
+                        </button>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <!-- Primary Bank Account -->
+                        <div class="p-4 bg-primary-50 border border-primary/20 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">Chase Checking</h3>
+                                        <p class="text-sm text-text-muted">****4892</p>
+                                    </div>
+                                </div>
+                                <span class="status-success">Primary</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-text-secondary">Fee: $0.00</span>
+                                <span class="text-text-secondary">Processing: 1-2 days</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Credit Card -->
+                        <div class="p-4 bg-surface border border-border rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-primary">Visa Rewards</h3>
+                                        <p class="text-sm text-text-muted">****7834</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm text-text-muted">Backup</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-text-secondary">Fee: 2.9%</span>
+                                <span class="text-text-secondary">Processing: Instant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autopay Orchestration -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-xl font-semibold text-text-primary">Autopay Orchestration</h2>
+                            <p class="text-sm text-text-secondary">Intelligent automation with seasonal adjustments</p>
+                        </div>
+                        <button class="btn-secondary">Configure Rules</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Rule 1 -->
+                        <div class="p-4 bg-accent-50 border border-accent/20 rounded-lg">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-semibold text-text-primary">Standard Bills Rule</h3>
+                                <div class="flex items-center space-x-2">
+                                    <span class="status-success">Active</span>
+                                    <button class="text-text-muted hover:text-text-secondary">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-sm text-text-secondary mb-3">Pay all bills 3 days before due date when amount is within 15% of historical average</p>
+                            <div class="flex items-center space-x-4 text-sm">
+                                <span class="text-text-muted">Applies to: 4 utilities</span>
+                                <span class="text-text-muted">Last triggered: Aug 10, 2025</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Rule 2 -->
+                        <div class="p-4 bg-warning-light border border-warning/20 rounded-lg">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-semibold text-text-primary">High Bill Alert Rule</h3>
+                                <div class="flex items-center space-x-2">
+                                    <span class="status-warning">Monitoring</span>
+                                    <button class="text-text-muted hover:text-text-secondary">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-sm text-text-secondary mb-3">Pause autopay and send notification when bill exceeds 25% of historical average</p>
+                            <div class="flex items-center space-x-4 text-sm">
+                                <span class="text-text-muted">Threshold: $150+ variance</span>
+                                <span class="text-text-muted">Never triggered</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Quick Stats & Actions -->
+            <div class="space-y-6">
+                <!-- Account Balance Overview -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Account Balance</h3>
+                    <div class="space-y-4">
+                        <div class="text-center">
+                            <p class="text-3xl font-mono font-bold text-text-primary">$1,247.50</p>
+                            <p class="text-sm text-text-secondary">Available Balance</p>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Upcoming Payments</span>
+                                <span class="text-sm font-mono text-text-primary">$417.14</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Remaining Balance</span>
+                                <span class="text-sm font-mono font-semibold text-accent">$830.36</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Payment -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Quick Payment</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-text-secondary mb-2">Select Utility</label>
+                            <select class="input-field">
+                                <option>ConEd Electric - $247.83</option>
+                                <option>National Grid Gas - $89.32</option>
+                                <option>Verizon Internet - $79.99</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-text-secondary mb-2">Payment Method</label>
+                            <select class="input-field">
+                                <option>Chase Checking ****4892</option>
+                                <option>Visa Rewards ****7834</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary w-full">Pay Now</button>
+                    </div>
+                </div>
+
+                <!-- Payment History Summary -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-text-primary">Recent Payments</h3>
+                        <a href="javascript:void(0)" class="text-sm text-primary hover:text-primary-700">View All</a>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                            <div>
+                                <p class="font-medium text-text-primary">ConEd Electric</p>
+                                <p class="text-sm text-text-muted">Aug 10, 2025</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-mono font-semibold text-text-primary">$234.56</p>
+                                <span class="status-success">Paid</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                            <div>
+                                <p class="font-medium text-text-primary">National Grid Gas</p>
+                                <p class="text-sm text-text-muted">Aug 8, 2025</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-mono font-semibold text-text-primary">$92.18</p>
+                                <span class="status-success">Paid</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                            <div>
+                                <p class="font-medium text-text-primary">Verizon Internet</p>
+                                <p class="text-sm text-text-muted">Aug 5, 2025</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-mono font-semibold text-text-primary">$79.99</p>
+                                <span class="status-success">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annual Spending Summary -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">2025 Spending Summary</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Electric</span>
+                            <span class="font-mono font-semibold text-text-primary">$2,847.32</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Gas</span>
+                            <span class="font-mono font-semibold text-text-primary">$1,234.56</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Internet</span>
+                            <span class="font-mono font-semibold text-text-primary">$959.88</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Water</span>
+                            <span class="font-mono font-semibold text-text-primary">$678.90</span>
+                        </div>
+                        <div class="border-t border-border pt-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-semibold text-text-primary">Total</span>
+                                <span class="font-mono font-bold text-xl text-text-primary">$5,720.66</span>
+                            </div>
+                            <p class="text-sm text-accent mt-1">12% less than 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Payment -->
+                <div class="card bg-error-light border-error/20">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-error/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-error">Emergency Payment</h3>
+                            <p class="text-sm text-text-secondary">For overdue bills</p>
+                        </div>
+                    </div>
+                    <button class="btn-primary w-full bg-error hover:bg-error/90">
+                        Process Emergency Payment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z"/>
+                            <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                        </svg>
+                        <span class="text-xl font-bold">Smart Utility Portal</span>
+                    </div>
+                    <p class="text-secondary-300">
+                        Your financial wellness partner for modern utility management.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="smart_dashboard_homepage.html" class="text-secondary-300 hover:text-white transition-fast">Dashboard</a></li>
+                        <li><a href="utility_account_management.html" class="text-secondary-300 hover:text-white transition-fast">Utility Management</a></li>
+                        <li><a href="bill_management_center.html" class="text-secondary-300 hover:text-white transition-fast">Bill Center</a></li>
+                        <li><a href="payment_command_center.html" class="text-secondary-300 hover:text-white transition-fast">Payment Center</a></li>
+                        <li><a href="pricing_plans.html" class="text-secondary-300 hover:text-white transition-fast">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Live Chat</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Video Tutorials</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">API Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Community Forum</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-white">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">About Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Careers</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Press</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-300 hover:text-white transition-fast">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-12 pt-8 text-center">
+                <p class="text-secondary-300">
+                    © 2025 Smart Utility Portal. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
